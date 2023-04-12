@@ -13,6 +13,7 @@ jobs:
         uses: apardo04/locust-github-action@master
         with:
           LOCUSTFILE: "locustfile.py"
+          REQUIREMENTS: "requirements.txt"
           URL:  "https://http.cat/"
           USERS: "5"
           RATE: "5"
