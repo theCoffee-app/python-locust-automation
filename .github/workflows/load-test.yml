@@ -18,3 +18,8 @@ jobs:
           USERS: "5"
           RATE: "5"
           RUNTIME: "10s"
+      - name: Archive load test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: load-test-results
+          path: output/load-test-results.csv
