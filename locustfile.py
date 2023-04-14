@@ -1,6 +1,6 @@
 from locust import HttpUser, constant, task
 
-baseURL = "https://http.cat/"
+baseURL = "https://http.cat"
 fivehundo = "/500"
 twohundo ="/200"
 
