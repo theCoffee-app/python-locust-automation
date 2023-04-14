@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run Load Test
-        uses: apardo04/locust-github-action@master
+        uses: theCoffee-app/locust-github-action@master
         with:
           LOCUSTFILE: "locustfile.py"
           REQUIREMENTS: "requirements.txt"
@@ -22,4 +22,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: load-test-results
-          path: output/load-test-results.csv
+          path: results_stats.csv
