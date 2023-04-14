@@ -9,6 +9,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Set env
+        run: echo "SECRET_KEY=$(echo ${{ secrets.IMMA_SECRET }})" >> $GITHUB_ENV
+      - name: Test
+        run: echo ${{ secrets.IMMA_SECRET }}
       - name: Run Load Test
         uses: theCoffee-app/locust-github-action@master
         with:
